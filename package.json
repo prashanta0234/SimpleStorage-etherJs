@@ -1,0 +1,25 @@
+{
+  "name": "Ehter-simple-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile":"solcjs --bin --include-path node_modules/ --base-path . SimpleStorage.sol"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashanta0234/SimpleStorage-etherJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashanta0234/SimpleStorage-etherJs/issues"
+  },
+  "homepage": "https://github.com/prashanta0234/SimpleStorage-etherJs#readme",
+  "dependencies": {
+    "solc": "^0.8.15"
+  }
+ 
+}
