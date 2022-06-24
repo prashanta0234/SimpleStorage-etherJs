@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/prashanta0234/SimpleStorage-etherJs#readme",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "ethers": "^5.6.9",
     "fs": "^0.0.1-security",
     "fs-extra": "^10.1.0",

@@ -1,15 +1,10 @@
 const { ethers } = require("ethers");
 const fs = require("fs");
-
+require("dotenv").config();
 async function main() {
   // write code here
-  const provider = new ethers.providers.JsonRpcProvider(
-    "HTTP://127.0.0.1:7545"
-  );
-  const wallet = new ethers.Wallet(
-    "8f11fea45ebb3a9d4faff2a88019a2c47b80563b0a3b7b22dc27e43a110020c1",
-    provider
-  );
+  const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_S);
+  const wallet = new ethers.Wallet(process.env.PRIVET_KEY, provider);
   const abi = fs.readFileSync("SimpleStorage_sol_SimpleStorage.abi", "utf8");
   const binary = fs.readFileSync("SimpleStorage_sol_SimpleStorage.bin", "utf8");
   const contractFactory = new ethers.ContractFactory(abi, binary, wallet);
@@ -18,6 +13,10 @@ async function main() {
 
   const fav = await contract.retrieve();
   console.log(fav.toString());
+  const valueInfav = await contract.store("5");
+  await valueInfav.wait(1);
+  const updated = await contract.retrieve();
+  console.log(updated.toString());
 }
 
 main()
