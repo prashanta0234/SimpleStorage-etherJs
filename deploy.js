@@ -15,6 +15,9 @@ async function main() {
   const contractFactory = new ethers.ContractFactory(abi, binary, wallet);
 
   const contract = await contractFactory.deploy();
+
+  const fav = await contract.retrieve();
+  console.log(fav.toString());
 }
 
 main()
