@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile":"solcjs --bin --include-path node_modules/ --base-path . SimpleStorage.sol"
+    "compile": "solcjs --bin --include-path node_modules/ --base-path . SimpleStorage.sol"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/prashanta0234/SimpleStorage-etherJs#readme",
   "dependencies": {
+    "ethers": "^5.6.9",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
     "solc": "^0.8.15"
   }
- 
 }
