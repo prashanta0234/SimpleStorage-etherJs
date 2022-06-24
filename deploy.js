@@ -16,7 +16,7 @@ async function main() {
   const valueInfav = await contract.store("5");
   await valueInfav.wait(1);
   const updated = await contract.retrieve();
-  console.log(updated.toString());
+  // console.log(updated.toString());
 }
 
 main()
